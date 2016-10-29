@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="author" content="Antoine Caron">
+		<title>Cloud</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="icon" type="image/ico" href="img/favicon.ico" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="img/FOND-Présentation.jpg" class="title">
+				<aside>	<h1>Cloud</h1>
+					<h3><span class="by">By</span> Antoine <span class="last">Caron</span></h3>
+				</aside>
+				</section>
+
+				<section>
+					<section data-background-image="img/FOND-Slide.jpg">
+						<h3>Définition :</h3>
+						<ul>
+							<li>Service à distance</li>
+							<li>Dématerialisé </li>
+							<li>Libre service</li>
+							<li>Paiement à l'usage</li>
+						</ul>
+					</section>
+					<section data-background-image="img/FOND-Slide.jpg">
+						<h3>Terminologie</h3>
+						<ul>
+							<li>IAAS => Infrastructure </li>
+							<li>PAAS => Plateforme </li>
+							<li>CAAS => Container</li>
+							<li>SAAS => Software</li>
+							<li>STAAS => Storage</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/FOND-Slide.jpg">
+						<h1>Les acteurs du marché</h1>
+					</section>
+				</section>
+				<section>
+					<section data-background-image="img/FOND-Slide.jpg">
+						<h1>Travail à réaliser</h1>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

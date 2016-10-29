@@ -1,0 +1,39 @@
+html .reveal .title h1 {
+  margin: 250px 30% auto 100px;
+  padding-bottom: 10px;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+html .reveal .title h3 {
+  position: absolute;
+  right: 130px;
+  bottom: -210px;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+
+html .reveal h1,
+html .reveal h2,
+html .reveal h3,
+html .reveal h4,
+html .reveal h5,
+html .reveal h6 {
+  text-transform: none;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+html .reveal .title h1,
+html .reveal .title h2,
+html .reveal .title h3,
+html .reveal .title h4,
+html .reveal .title h5,
+html .reveal .title h6 {
+  color: white;
+}
+
+.reveal section img {
+    border: none;
+}
