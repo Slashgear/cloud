@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="author" content="Antoine Caron">
-		<title>Cloud Computing</title>
+		<title>Cloud</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -22,152 +22,25 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<style>
+			* {
+				font-family: 'Open Sans', sans-serif;
+			}
+			body {
+				background-image: url('img/aya-logo.png');
+				background-repeat: no-repeat;
+				background-position: top right;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-image="img/FOND-Présentation.jpg" class="title">
-				<aside>	<h1>Cloud Computing</h1>
+				<section class="title">
+				<aside>	<h1>Cloud</h1>
 					<h3><span class="by">By</span> Antoine <span class="last">Caron</span></h3>
 				</aside>
-				</section>
-				<section>
-					<section data-background-image="img/FOND-Slide.jpg">
-							<h3>Plan du cours :</h3>
-							<ul>
-								<li>4 x 4h de TP sur 1 mois</li>
-								<li>un peu de "Théorie"</li>
-								<li>travail à réaliser et règles du jeu</li>
-								<li>pas de quizz !!</li>
-							</ul>
-					</section>
-					<section>
-						<iframe src="//giphy.com/embed/13zQlX1JcXEe4w" width="480" height="372" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-					</section>
-				</section>
-				<section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h3>Définition :</h3>
-						<ul>
-							<li>Service à distance</li>
-							<li>Dématerialisé </li>
-							<li>Libre service</li>
-							<li>Paiement à l'usage</li>
-						</ul>
-						<p>Pourquoi utiliser du cloud ?</p>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h3>Terminologie</h3>
-						<ul>
-							<li>IAAS => Infrastructure </li>
-							<li>PAAS => Plateforme </li>
-							<li>CAAS => Container</li>
-							<li>SAAS => Software</li>
-							<li>STAAS => Storage</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h2>Les principaux acteurs du marché IAAS</h2>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/ovh.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/google.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/ibm.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/azure.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/digitalocean.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/aws.png">
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<img src="img/evil-corp.png">
-					</section>
-				</section>
-				<section data-background-image="img/FOND-Slide.jpg">
-					<h3>Les services cloud qu'on utilise en temps que dev ?</h3>
-					<ul>
-						<li>Travis, Wercker, .. </li>
-						<li>Heroku,..</li>
-						<li>Github,..</li>
-						<li>..</li>
-						<li><a href="https://medium.com/memory-leak/introducing-the-cloud-native-landscape-86c536411373#.yqy52mnib">Cartographie</a></li>
-					</ul>
-				</section>
-				<section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h2>Règles du jeu</h2>
-						<ol>
-							<li>Former 3 équipes de 4 et 1 équipe de 5.</li>
-							<li>Un chef de groupe par équipe</li>
-							<li>Un machine linux par équipe pendant 1 mois.</li>
-							<li>Déployer un ensemble applicatif sur cette machine.</li>
-							<li>Uniquement du légal sinon 0/20.</li>
-							<li>Apprendre.</li>
-						</ol>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-							<ul>
-								<li>Explication
-									<ul>
-										<li>aux chefs de groupe</li>
-										<li>à tout le monde</li>
-									</ul>
-								</li>
-								<li>Passer un moment avec chaque groupe</li>
-							</ul>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-							<h3>Une soutenance d'un heure pour présenter vos résultats.</h3>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h3>La machine t2.small + Elastic IP:</h3>
-						<ul>
-							<li>Amazon linux (Php, Java, Docker, Python, Ruby, ..)</li>
-							<li>8Go de SSD</li>
-							<li>2Go de RAM</li>
-							<li>Port 22 ouvert</li>
-							<li>Hébergé en Irlande</li>
-							<li>Disponible 24h/24 7j/7 pendant 1 mois</li>
-							<li>Hotline c'est moi, attention !</li>
-							<li>Entièrement surveillé, je vois tout ce qui se passe. (&#9888;€€€)</li>
-							<li>Si vous voulez plus, débrouillez vous.</li>
-						</ul>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h3>Les indicateurs majeurs :</h3>
-						<ul>
-							<li>L'architecture</li>
-							<li>Le temps de déploiement</li>
-							<li>Sécurité</li>
-							<li>La complexité</li>
-							<li>Investissement personnel</li>
-						</ul>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<h3>Bonus</h3>
-						<ul> 
-							<li>Continous Integration &#10084;</li>
-							<li>Continous Deployement &#10084;</li>
-							<li>La scalabilité</li>
-							<li>High Availability</li>
-							<li>Monitoring/ Suivi de logs</li>
-						</ul>
-					</section>
-					<section data-background-image="img/FOND-Slide.jpg">
-						<a href="https://docs.google.com/spreadsheets/d/1bVsvSNQ_22YCCmB43k-jEjmk85xPfohOc8S9Ibb0sQg/edit?usp=sharing">
-							Lien vers la grille de notation.
-						</a>
-					</section>
 				</section>
 			</div>
 		</div>
