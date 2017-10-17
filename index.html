@@ -1,104 +1,228 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="author" content="Antoine Caron">
-		<title>Cloud</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Antoine Caron">
+    <title>Cloud</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<link rel="stylesheet" href="css/index.css">
-		<link rel="icon" type="image/ico" href="img/favicon.ico" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-		<style>
-			* {
-				font-family: 'Open Sans', sans-serif;
-			}
-			body {
-				background-image: url('img/aya-logo.png');
-				background-repeat: no-repeat;
-				background-position: top right;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="title">
-				<aside>	<h1>Cloud</h1>
-					<h3><span class="by">By</span> Antoine <span class="last">Caron</span></h3>
-				</aside>
-				</section>
-				<section>
-					<h1>Objectifs du cours</h1>
-					<ul>
-						<li>Découvrir la gestion d'un server linux</li>
-						<li>Concevoir en équipe une solution techniqueà une problématique</li>
-						<li>Réaliser votre solution</li>						
-						<li>Industrialiser/automatiser le déploiement de sa solution</li>						
-						<li>Prendre du recul, analyser sa solution</li>												
-					</ul>
-				</section>
-				<section>
-					<h1>Cloud aujourd'hui</h1>
-					<ul>
-						<li>Multitudes de solutions...</li>
-						<li>IAAS</li>
-						<li>PAAS</li>						
-						<li>CAAS</li>
-						<li>CAAS</li>						
-					</ul>
-				</section>
-				<section>
-					<h1>Sujet</h1>
-					<p>Fournir une API rest de gestion de USER</p>
-					<p>La déployer sur le server linux</p>
-				</section>
-				<section>
-					<h1>Contexte</h1>
-					<p>Un client, moi, veut une API qui peut gérer plusieurs millier d'utilisateurs.</p>
-					<p>Il l'a veut rapidement, et ne veut pas de bug.</p>
-					<p>Il risque de vous demander des nouvelles fonctionnalités</p>	
-					<p>Il va faire appel à un architecte informatique (moi) pour valider vos choix techniques</p>										
-				</section>
-				<section>
-					<p>L'architecte impose plusieurs contraintes :</p>
-					<p>L'application doit être testée (c'est dans votre intérêt)</p>
-					<p>Vous devrez mettre en place de l'intégration continue</p>	
-					<p>Vous devrez mettre en place du déploiement continue</p>										
-				</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        body {
+            background-image: url('img/aya-logo.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="title">
+            <aside><h1>Cloud</h1>
+                <h3><span class="by">By</span> Antoine <span class="last">Caron</span></h3>
+            </aside>
+        </section>
+        <section>
+            <h1>Objectifs du cours</h1>
+            <ul>
+                <li>Découvrir la gestion d'un server linux</li>
+                <li>Concevoir en équipe une solution techniqueà une problématique</li>
+                <li>Réaliser votre solution</li>
+                <li>Industrialiser/automatiser le déploiement de sa solution</li>
+                <li>Prendre du recul, analyser sa solution</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Cloud aujourd'hui</h1>
+            <ul>
+                <li>Multitudes de solutions...</li>
+                <li>IAAS</li>
+                <li>PAAS</li>
+                <li>CAAS</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h1>Sujet</h1>
+                <p>Fournir une API rest de gestion de USER</p>
+                <p>La déployer sur le server linux</p>
+            </section>
+            <section>
+                <h1>Contexte</h1>
+                <p>Un client veut une API qui peut gérer plusieurs millier d'utilisateurs.</p>
+                <p>Il l'a veut rapidement, et ne veut pas de bug.</p>
+                <p>Il risque de vous demander des nouvelles fonctionnalités</p>
+                <p>Il va faire appel à un architecte informatique pour valider vos choix techniques</p>
+            </section>
+            <section>
+                <p>L'architecte impose plusieurs contraintes :</p>
+                <ul>
+                    <li>L'application doit être testée (c'est dans votre intérêt)</li>
+                    <li>Vous devrez mettre en place de l'intégration continue</li>
+                    <li>Vous devrez mettre en place du déploiement continue</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Organisation</h1>
+                <p>Vous formez des <b>groupes de 4</b> et je vous fourni un server linux sur lequel rien est configuré.
+                </p>
+                <p>4 séances de 4H de TP et la dernière est consacrée à la soutenance présentation</p>
+                <a href="https://classroom.github.com/g/0geRfvqJ">https://classroom.github.com/g/0geRfvqJ</a>
+            </section>
+            <section>
+                <h1>La note</h1>
+                <ul>
+                    <li> Une note automatique sur le fonctionnement de votre API (des tests automatisés)</li>
+                    <li>Une note de soutenance, pendant laquelle vous présenterez et justifierez vos choix.</li>
+                    <li>Une note d'audit (sécurité, qualité de code, respect des règles)</li>
+                    <li>⚠️ Une note de participation/ organisation du groupe.</li>
+                </ul>
+            </section>
+            <section>
+                <p> ⚠️ Vous êtes 4, il faut vous organiser.</p>
+                <p>Je ne veux pas voir 3 personnes qui attendent pendant qu'une
+                    personne recherche ou avance.</p>
+                <p>Je peux vous aider à vous découper les tâches.</p>
+                <iframe src="https://giphy.com/embed/3o6ozD4FXYQNv5ERjy" width="480" height="360" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+            </section>
+            <section>
+                ⚠️ Ne faites pas n'importe quoi avec la machine.
+                <br/> Rien d'illégale
+                <p>Je 🔍 tout ce qui se passe sur la machine, si je vois la moindre chose illégale, c'est 0 et vous ne
+                    validez pas votre matière et par conséquance le semestre.</p>
+            </section>
+            <section>
+                <iframe src="https://giphy.com/embed/ZikyVyLF7aEaQ" width="480" height="360" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+            </section>
+            <section>
+                ⚠️ Le premier plantage de machine ne coute rien, à partir du suivant ce sera 1 point sur la moyenne.
+            </section>
+        </section>
+        <section>
+            <section><h1>Concrètement on fait quoi ?</h1>
+                <iframe src="https://giphy.com/embed/12mPcp41D9a1i0" width="480" height="275" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+            </section>
+            <section>
+                <p>Comme un ingénieur dans un contexte professionel, vous avez (très souvent) la liberté
+                    d'implémentation.</p>
+                <p>Vous être <b>LIBRE</b> des technologies que vous utilisez, mais ⚠️ à ne pas faire de choix trop
+                    ambitieux/WTF</p>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                #Demande Client 1
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+                Faire une API REST sur le port 80 de votre machine qui permet de manipuler ce type d'object
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+                ```javascript
+                {
+                    "id": 12121212123123,
+                    "firstName": "Antoine",
+                    "lastName": "Caron",
+                    "birthDay": "2012-07-14",
+                    "position": {
+                        "lat": 45.737526,
+                        "lon": 4.814719,
+                    }
+                }
+                ```
+            </section>
+            <section data-markdown>
+                #Méthodes disponibles
+
+                * GET /user retourne tous les utilisateurs
+                * PUT /user permet de remplacer la collection entière par une liste de users
+                * POST /user Ajoute un nouveau utilisateur en paramètre
+                * DELETE /user Supprime toutt la collection de user
+
+                ⚠️ à vos codes de retour HTTP
+            </section>
+            <section data-markdown>
+                * GET /user/{id} retourne l'utilisateur
+                * PUT /user/{id} remplace l'utilisateur ou le crée
+                * DELETE /user/{id} Supprime le user
+            </section>
+            <section data-markdown>
+                # Demande Architecte 1
+
+                * Mise en place de tests Unitaires/ Fonctionnels de l'API
+                * Mise en place d'une intégration continue. (Travis, Circle-CI)
+                * Déploiement de la demande client 1 sur la machine
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                #Demande Client 2 - Pagination
+
+                * GET /user?page=1 retourne les 100 premiers utilisateurs, page est par défaut à 1
+            </section>
+            <section data-markdown>
+                # Demande Architecte 2
+
+                * Maintient des tests
+                * Mise en place d'une intégration continue.
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                #Demande Client 3 - Recherche
+
+                * GET /user/age?gt=0&page=1 retourne les 100 premiers utilisateurs dont l'age est supérieur à 0.
+                * GET /user/age?eq=0&page=1 retourne les 100 premiers utilisateurs dont l'age est égal à 0.
+                * GET /user/search?name="toto"&page=1 retourne les 100 premiers
+                * GET /user/nearest?lat="43.12"&lon="5.97" retourne les 10 utilisateurs les plus proche.
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
