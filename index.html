@@ -67,26 +67,25 @@
                 <h1>Sujet</h1>
                 <p>Fournir une API rest de gestion de USER</p>
                 <p>La déployer sur le server linux</p>
+                <p><b>Trois persona vont juer votre travail: Le client, l'architecte, le Prof</b></p>
             </section>
             <section>
-                <h1>Contexte</h1>
+                <h1>Client</h1>
                 <p>Un client veut une API qui peut gérer plusieurs millier d'utilisateurs.</p>
                 <p>Il l'a veut rapidement, et ne veut pas de bug.</p>
                 <p>Il risque de vous demander des nouvelles fonctionnalités</p>
                 <p>Il va faire appel à un architecte informatique pour valider vos choix techniques</p>
             </section>
             <section>
-                <p>L'architecte impose plusieurs contraintes :</p>
+                <h1>Architecte</h1>
                 <ul>
                     <li>L'application doit être testée (c'est dans votre intérêt)</li>
                     <li>Vous devrez mettre en place de l'intégration continue</li>
                     <li>Vous devrez mettre en place du déploiement continue</li>
                 </ul>
             </section>
-        </section>
-        <section>
             <section>
-                <h1>Organisation</h1>
+                <h1>Le Prof</h1>
                 <p>Vous formez des <b>groupes de 4</b> et je vous fourni un server linux sur lequel rien est configuré.
                 </p>
                 <p>4 séances de 4H de TP et la dernière est consacrée à la soutenance présentation</p>
@@ -95,10 +94,11 @@
             <section>
                 <h1>La note</h1>
                 <ul>
-                    <li> Une note automatique sur le fonctionnement de votre API (des tests automatisés)</li>
-                    <li>Une note de soutenance, pendant laquelle vous présenterez et justifierez vos choix.</li>
-                    <li>Une note d'audit (sécurité, qualité de code, respect des règles)</li>
-                    <li>⚠️ Une note de participation/ organisation du groupe.</li>
+                    <li>Client - Une note automatique sur le fonctionnement de votre API (des tests automatisés)</li>
+                    <li>Architecte - Une note de soutenance, pendant laquelle vous présenterez et justifierez vos choix.</li>
+                    <li>Archiytecte - Une note d'audit (sécurité, qualité de code, respect des règles)</li>
+                    <li>Prof - une note sur l'organisation du groupe.</li>
+                    <li>Prof - ⚠️ Une note de participation</li>
                 </ul>
             </section>
             <section>
@@ -124,18 +124,6 @@
             </section>
         </section>
         <section>
-            <section><h1>Concrètement on fait quoi ?</h1>
-                <iframe src="https://giphy.com/embed/12mPcp41D9a1i0" width="480" height="275" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
-            </section>
-            <section>
-                <p>Comme un ingénieur dans un contexte professionel, vous avez (très souvent) la liberté
-                    d'implémentation.</p>
-                <p>Vous être <b>LIBRE</b> des technologies que vous utilisez, mais ⚠️ à ne pas faire de choix trop
-                    ambitieux/WTF</p>
-            </section>
-        </section>
-        <section>
             <section data-markdown>
                 #Demande Client 1
 
@@ -148,9 +136,9 @@
                     "lastName": "Caron",
                     "birthDay": "2012-07-14",
                     "position": {
-                        "lat": 45.737526,
-                        "lon": 4.814719,
-                    }
+                    "lat": 45.737526,
+                    "lon": 4.814719,
+                }
                 }
                 ```
             </section>
@@ -174,7 +162,7 @@
 
                 * Mise en place de tests Unitaires/ Fonctionnels de l'API
                 * Mise en place d'une intégration continue. (Travis, Circle-CI)
-                * Déploiement de la demande client 1 sur la machine
+                * Déploiement simple de la demande client 1 sur la machine
             </section>
         </section>
         <section>
@@ -196,9 +184,99 @@
 
                 * GET /user/age?gt=0&page=1 retourne les 100 premiers utilisateurs dont l'age est supérieur à 0.
                 * GET /user/age?eq=0&page=1 retourne les 100 premiers utilisateurs dont l'age est égal à 0.
-                * GET /user/search?name="toto"&page=1 retourne les 100 premiers
-                * GET /user/nearest?lat="43.12"&lon="5.97" retourne les 10 utilisateurs les plus proche.
+                * GET /user/search?name=toto&page=1 retourne les 100 premiers
+                * GET /user/nearest?lat=43.12&lon=5.97 retourne les 10 utilisateurs les plus proche.
             </section>
+            <section data-markdown>
+                # Demande Architecte 3
+
+                * HTTPS
+                * Optimisation des temps de réponse (Ex: cache)
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                # Soutenance
+
+                * 6 slides attendues
+                * ⚠️ Ne pas présenter le contexte projet/client
+            </section>
+            <section data-markdown>
+                # Architecture
+
+                * 1 schéma + plus explication de l'achitecture déployée
+                * expliquer l'évolution de l'architexture mise en place
+            </section>
+            <section data-markdown>
+                # Choix techniques
+
+                * expliquer les choix techniques des technologies Server
+                * avantages et inconvénients
+                * Est ce que ces choix étaient les bon
+            </section>
+            <section data-markdown>
+                # Demo
+
+                * On efface tout ce qu'il y a sur le server et on mesure le temps de réinstallation from scratch
+            </section>
+            <section data-markdown>
+                # Organisation du groupe et du travail
+            </section>
+            <section data-markdown>
+                # Justifier l'intérêt de CI/CD
+            </section>
+            <section data-markdown>
+                # Difficultés rencontrées et retours sur l'UE
+            </section>
+        </section>
+        <section>
+            <section><h1>Concrètement on fait quoi ?</h1>
+                <iframe src="https://giphy.com/embed/12mPcp41D9a1i0" width="480" height="275" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+            </section>
+            <section>
+                <p>Comme un ingénieur dans un contexte professionel, vous avez (très souvent) la liberté
+                    d'implémentation.</p>
+                <p>Vous être <b>LIBRE</b> des technologies que vous utilisez, mais ⚠️ à ne pas faire de choix trop
+                    ambitieux/WTF</p>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                # Séance 1
+
+                ### Avant 10h
+                * Les groupes sont fait et les choix techno pour le server et la BDD sont établis
+                * Une personne de chaque groupe a accès en ssh à la machine
+
+                ### Avant 12h
+                * 75% des groupes doivent avoir une base d'API fonctionnel
+            </section>
+            <section data-markdown>
+                # Séance 2
+
+                ### Avant 10h
+                * 75% des groupes doivent avoir la demande client 1 Ok
+                * 75% des groupes doivent avoir la demande arhcitecte Ok
+
+                ### Avant 12h
+                * Test unitaire/fonctionnel en place
+                * Intégration continue en place
+            </section>
+            <section data-markdown>
+                # Séance 3
+
+                ### Avant 10h
+                * 75% des groupes doivent avoir CD Ok
+
+                Objectif => Avancer le maximum de sujets.
+            </section>
+            <section data-markdown>
+                # Séance 4 - Soutenance
+            </section>
+        </section>
+        <section>
+            <a>Script client eval</a>
         </section>
     </div>
 </div>
