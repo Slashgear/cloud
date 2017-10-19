@@ -128,9 +128,9 @@
         </section>
         <section>
             <section data-markdown>
-                #Demande Client 1
+                #Demande du client n° 1 - Fonctionnalités de base
 
-                Faire une API REST sur le port 80 de votre machine qui permet de manipuler ce type d'object
+                Faire une API REST sur le port 80 du serveur permettant de manipuler ce type d'objet
 
                 ```javascript
                 {
@@ -139,33 +139,35 @@
                     "lastName": "Caron",
                     "birthDay": "2012-07-14",
                     "position": {
-                    "lat": 45.737526,
-                    "lon": 4.814719,
-                }
+                        "lat": 45.737526,
+                        "lon": 4.814719,
+                    }
                 }
                 ```
             </section>
             <section data-markdown>
-                #Méthodes disponibles
+                #Méthodes disponibles (1/2)
 
-                * GET /user retourne tous les utilisateurs
-                * PUT /user permet de remplacer la collection entière par une liste de users
-                * POST /user Ajoute un nouveau utilisateur en paramètre
-                * DELETE /user Supprime toutt la collection de user
+                * GET /users -> retourne tous les utilisateurs
+                * PUT /users -> permet de remplacer la collection entière par une nouvelle liste d'utilisateur
+                * DELETE /users -> supprime toute la collection des utilisateurs
 
                 ⚠️ à vos codes de retour HTTP
             </section>
             <section data-markdown>
-                * GET /user/{id} retourne l'utilisateur
-                * PUT /user/{id} remplace l'utilisateur ou le crée
-                * DELETE /user/{id} Supprime le user
+                #Méthodes disponibles (2/2)
+
+                * GET /user/{id} -> retourne l'utilisateur correspondant
+                * POST /user -> ajoute un nouvel utilisateur passé en paramètre
+                * PUT /user/{id} -> met à jour l'utilisateur
+                * DELETE /user/{id} -> supprime l'utilisateur correspondant
             </section>
             <section data-markdown>
-                # Demande Architecte 1
+                # Demande de l'architecte n° 1
 
-                * Mise en place de tests Unitaires/ Fonctionnels de l'API
-                * Mise en place d'une intégration continue. (Travis, Circle-CI)
-                * Déploiement simple de la demande client 1 sur la machine
+                * Mise en place de tests unitaires/fonctionnels de l'API
+                * Mise en place d'une intégration continue (Travis ou Circle-CI)
+                * Déploiement basique de la demande du client n° 1 sur le serveur
             </section>
         </section>
         <section>
