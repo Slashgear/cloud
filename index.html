@@ -39,107 +39,98 @@
 <div class="reveal">
     <div class="slides">
         <section class="title">
-            <aside><h1>Cloud</h1>
+            <aside>
+                <h1>Cloud</h1>
                 <h3><span class="by">By</span> Antoine <span class="last">Caron</span></h3>
             </aside>
         </section>
         <section>
             <h1>Objectifs du cours</h1>
             <ul>
-                <li>Découvrir la gestion d'un server linux</li>
-                <li>Concevoir en équipe une solution techniqueà une problématique</li>
+                <li>Découvrir la gestion d'un serveur Linux</li>
+                <li>Concevoir en équipe une solution technique à un problème donné</li>
                 <li>Réaliser votre solution</li>
-                <li>Industrialiser/automatiser le déploiement de sa solution</li>
-                <li>Prendre du recul, analyser sa solution</li>
+                <li>Industrialiser/automatiser le déploiement de cette solution</li>
+                <li>Prendre du recul, analyser sa solution et l'améliorer</li>
             </ul>
         </section>
         <section>
-            <h1>Cloud aujourd'hui</h1>
+            <h1>Cloud d'aujourd'hui</h1>
             <ul>
-                <li>Multitudes de solutions...</li>
+                <li>Multitude de solution...</li>
                 <li>IAAS</li>
                 <li>PAAS</li>
                 <li>CAAS</li>
+                <li>*AAS</li>
             </ul>
         </section>
         <section>
             <section>
-                <h1>Sujet</h1>
-                <p>Fournir une API rest de gestion de USER</p>
-                <p>La déployer sur le server linux</p>
+                <h1>Projet en bref</h1>
+                <ul>
+                    <li>Fournir une API REST de gestion d'utilisateurs (USER)</li>
+                    <li>La déployer sur un serveur Linux</li>
+                    <li><b>Trois persona vont juer votre travail : le client, l'architecte et le prof</b></li>
+                </ul>
             </section>
             <section>
-                <h1>Contexte</h1>
-                <p>Un client veut une API qui peut gérer plusieurs millier d'utilisateurs.</p>
-                <p>Il l'a veut rapidement, et ne veut pas de bug.</p>
-                <p>Il risque de vous demander des nouvelles fonctionnalités</p>
-                <p>Il va faire appel à un architecte informatique pour valider vos choix techniques</p>
+                <h1>Côté client</h1>
+                <ul>
+                    <li>Un client veut une API qui peut gérer plusieurs milliers d'utilisateurs</li>
+                    <li>Il l'a veut rapidement et sans <b>bug</b> !</li>
+                    <li>Il risque de vous demander des nouvelles fonctionnalités</li>
+                    <li>Il va faire appel à un architecte informatique pour valider vos choix techniques</li>
+                </ul>
             </section>
             <section>
-                <p>L'architecte impose plusieurs contraintes :</p>
+                <p>Côté architecte</p>
                 <ul>
                     <li>L'application doit être testée (c'est dans votre intérêt)</li>
-                    <li>Vous devrez mettre en place de l'intégration continue</li>
-                    <li>Vous devrez mettre en place du déploiement continue</li>
+                    <li>Vous devez mettre en place de l'intégration continue</li>
+                    <li>Vous devez mettre en place du déploiement continu</li>
                 </ul>
             </section>
-        </section>
-        <section>
             <section>
-                <h1>Organisation</h1>
-                <p>Vous formez des <b>groupes de 4</b> et je vous fourni un server linux sur lequel rien est configuré.
-                </p>
-                <p>4 séances de 4H de TP et la dernière est consacrée à la soutenance présentation</p>
-                <a href="https://classroom.github.com/g/0geRfvqJ">https://classroom.github.com/g/0geRfvqJ</a>
-            </section>
-            <section>
-                <h1>La note</h1>
+                <h1>Côté prof</h1>
                 <ul>
-                    <li> Une note automatique sur le fonctionnement de votre API (des tests automatisés)</li>
-                    <li>Une note de soutenance, pendant laquelle vous présenterez et justifierez vos choix.</li>
-                    <li>Une note d'audit (sécurité, qualité de code, respect des règles)</li>
-                    <li>⚠️ Une note de participation/ organisation du groupe.</li>
+                    <li>Vous formez des <b>groupes de 4</b> et je vous fourni un serveur Linux sur lequel rien n'est configuré</li>
+                    <li>4 séances de TP de 4H (la dernière est consacrée à la soutenance)</li>
+                    <li><a href="https://classroom.github.com/g/0geRfvqJ">https://classroom.github.com/g/0geRfvqJ</a></li>
                 </ul>
             </section>
             <section>
-                <p> ⚠️ Vous êtes 4, il faut vous organiser.</p>
-                <p>Je ne veux pas voir 3 personnes qui attendent pendant qu'une
-                    personne recherche ou avance.</p>
-                <p>Je peux vous aider à vous découper les tâches.</p>
-                <iframe src="https://giphy.com/embed/3o6ozD4FXYQNv5ERjy" width="480" height="360" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
+                <h1>Note finale</h1>
+                <ul>
+                    <li>Client - une note automatique sur le fonctionnement de votre API (tests automatisés)</li>
+                    <li>Architecte - une note de soutenance pendant laquelle vous présenterez et justifierez vos choix</li>
+                    <li>Architecte - une note d'audit (sécurité, qualité de code et respect des règles)</li>
+                    <li>Prof - une note sur l'organisation du groupe</li>
+                    <li>Prof - ⚠️ une note de <b>participation</b></li>
+                </ul>
             </section>
             <section>
-                ⚠️ Ne faites pas n'importe quoi avec la machine.
-                <br/> Rien d'illégale
-                <p>Je 🔍 tout ce qui se passe sur la machine, si je vois la moindre chose illégale, c'est 0 et vous ne
-                    validez pas votre matière et par conséquance le semestre.</p>
+                <p>⚠️ Vous êtes 4, il faut vous organiser !</p>
+                <p>Je ne veux pas voir 3 personnes qui attendent pendant qu'une personne recherche ou avance</p>
+                <p>Je peux vous aider à vous découper les tâches</p>
+                <iframe src="https://giphy.com/embed/3o6ozD4FXYQNv5ERjy" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </section>
             <section>
-                <iframe src="https://giphy.com/embed/ZikyVyLF7aEaQ" width="480" height="360" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
+                <p>⚠️ Ne faites pas n'importe quoi avec le serveur Linux</p>
+                <br/>Rien d'illégal !
+                <p>Je 🔍 tout ce qu'il se passe sur la machine, si je vois la moindre action illégal, c'est 0 et vous ne validez pas votre matière et par conséquance le semestre.</p>
             </section>
             <section>
-                ⚠️ Le premier plantage de machine ne coute rien, à partir du suivant ce sera 1 point sur la moyenne.
-            </section>
-        </section>
-        <section>
-            <section><h1>Concrètement on fait quoi ?</h1>
-                <iframe src="https://giphy.com/embed/12mPcp41D9a1i0" width="480" height="275" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
+                <iframe src="https://giphy.com/embed/ZikyVyLF7aEaQ" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </section>
             <section>
-                <p>Comme un ingénieur dans un contexte professionel, vous avez (très souvent) la liberté
-                    d'implémentation.</p>
-                <p>Vous être <b>LIBRE</b> des technologies que vous utilisez, mais ⚠️ à ne pas faire de choix trop
-                    ambitieux/WTF</p>
+                ⚠️ Le premier crash du serveur ne coute rien, mais à partir du suivant ce sera 1 point sur la moyenne finale
             </section>
         </section>
         <section>
             <section data-markdown>
-                #Demande Client 1
+                #Demande du client n° 1 - Fonctionnalités de base
 
-                Faire une API REST sur le port 80 de votre machine qui permet de manipuler ce type d'object
+                Faire une API REST sur le port 80 du serveur permettant de manipuler ce type d'objet
 
                 ```javascript
                 {
@@ -155,50 +146,142 @@
                 ```
             </section>
             <section data-markdown>
-                #Méthodes disponibles
+                #Méthodes disponibles (1/2)
 
-                * GET /user retourne tous les utilisateurs
-                * PUT /user permet de remplacer la collection entière par une liste de users
-                * POST /user Ajoute un nouveau utilisateur en paramètre
-                * DELETE /user Supprime toutt la collection de user
+                * GET /users -> retourne tous les utilisateurs
+                * PUT /users -> permet de remplacer la collection entière par une nouvelle liste d'utilisateur
+                * DELETE /users -> supprime toute la collection des utilisateurs
 
                 ⚠️ à vos codes de retour HTTP
             </section>
             <section data-markdown>
-                * GET /user/{id} retourne l'utilisateur
-                * PUT /user/{id} remplace l'utilisateur ou le crée
-                * DELETE /user/{id} Supprime le user
+                #Méthodes disponibles (2/2)
+
+                * GET /user/{id} -> retourne l'utilisateur correspondant
+                * POST /user -> ajoute un nouvel utilisateur passé en paramètre
+                * PUT /user/{id} -> met à jour l'utilisateur
+                * DELETE /user/{id} -> supprime l'utilisateur correspondant
             </section>
             <section data-markdown>
-                # Demande Architecte 1
+                # Demande de l'architecte n° 1
 
-                * Mise en place de tests Unitaires/ Fonctionnels de l'API
-                * Mise en place d'une intégration continue. (Travis, Circle-CI)
-                * Déploiement de la demande client 1 sur la machine
+                * Mise en place de tests unitaires/fonctionnels de l'API
+                * Mise en place d'une intégration continue (Travis ou Circle-CI)
+                * Déploiement basique de la demande du client n° 1 sur le serveur
             </section>
         </section>
         <section>
             <section data-markdown>
-                #Demande Client 2 - Pagination
+                #Demande du client n° 2 - Pagination
 
-                * GET /user?page=1 retourne les 100 premiers utilisateurs, page est par défaut à 1
+                * GET /user?page=1 -> retourne les 100 premiers utilisateurs (⚠️ la page est par défaut à 1)
             </section>
             <section data-markdown>
-                # Demande Architecte 2
+                # Demande de l'architecte n° 2
 
-                * Maintient des tests
-                * Mise en place d'une intégration continue.
+                * Maintient des tests unitaires/fonctionnels de l'API
+                * Maintient de l'intégration continue
             </section>
         </section>
         <section>
             <section data-markdown>
-                #Demande Client 3 - Recherche
+                #Demande du client n° 3 - Recherche
 
-                * GET /user/age?gt=0&page=1 retourne les 100 premiers utilisateurs dont l'age est supérieur à 0.
-                * GET /user/age?eq=0&page=1 retourne les 100 premiers utilisateurs dont l'age est égal à 0.
-                * GET /user/search?name="toto"&page=1 retourne les 100 premiers
-                * GET /user/nearest?lat="43.12"&lon="5.97" retourne les 10 utilisateurs les plus proche.
+                * GET /user/age?gt=0&page=1 -> retourne les 100 premiers utilisateurs dont l'age est supérieur à 0
+                * GET /user/age?eq=0&page=1 -> retourne les 100 premiers utilisateurs dont l'age est égal à 0
+                * GET /user/search?name=toto&page=1 -> retourne les 100 premiers utilisateurs dont le nom est "toto"
+                * GET /user/nearest?lat=43.12&lon=5.97 -> retourne les 10 utilisateurs les plus proches
             </section>
+            <section data-markdown>
+                # Demande de l'architecte n° 3
+
+                * HTTPS
+                * Optimisation des temps de réponse (ex : cache)
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                # Soutenance finale
+
+                * 6 slides attendues
+                * ⚠️ Ne pas présenter le contexte projet/client
+            </section>
+            <section data-markdown>
+                # Architecture
+
+                * 1 schéma global + des explications de l'achitecture déployée
+                * Expliquer l'évolution de l'architecture mise en place
+            </section>
+            <section data-markdown>
+                # Choix techniques
+
+                * Expliquer les choix techniques des technologies utilisées (côté serveur)
+                * Avantages et inconvénients des technologies utilisées
+                * Est-ce que ces choix étaient les bons ?
+            </section>
+            <section data-markdown>
+                # Démonstration
+
+                * On efface tout ce qu'il y a sur le serveur et on mesure le temps de ré-installation from scratch
+            </section>
+            <section data-markdown>
+                # Organisation du groupe et du travail
+            </section>
+            <section data-markdown>
+                # Justifier l'intérêt du CI/CD
+            </section>
+            <section data-markdown>
+                # Difficultés rencontrées et retours sur l'UE
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Concrètement, on fait quoi ?</h1>
+                <iframe src="https://giphy.com/embed/12mPcp41D9a1i0" width="480" height="275" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </section>
+            <section>
+                <p>Comme un ingénieur dans un contexte professionnel, vous avez (très souvent) la liberté d'implémentation</p>
+                <p>Vous être <b>LIBRE</b> des technologies que vous utilisez, mais ⚠️ à ne pas faire des choix trop ambitieux/WTF</p>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                # Séance n° 1
+
+                ### Avant 10h
+                * Les groupes sont constitués et les choix technogiques pour le serveur et la BDD sont établis
+                * Une personne de chaque groupe a un accès SSH à la machine distante
+
+                ### Avant 12h
+                * 75% des groupes doivent avoir une base d'API fonctionnelle
+            </section>
+            <section data-markdown>
+                # Séance n° 2
+
+                ### Avant 10h
+                * 75% des groupes doivent avoir la demande du client n° 1 Ok
+                * 75% des groupes doivent avoir la demande de l'architecte n° 1 Ok
+
+                ### Avant 12h
+                * Les tests unitaires/fonctionnels sont en place
+                * L'intégration continue est en place
+            </section>
+            <section data-markdown>
+                # Séance n° 3
+
+                ### Avant 10h
+                * 75% des groupes doivent avoir le déploiement continu Ok
+
+                Objectif => Avancer au maximum sur le projet global
+            </section>
+            <section data-markdown>
+                # Séance n° 4
+                
+                ###Soutenance
+            </section>
+        </section>
+        <section>
+            <a href="https://github.com/Slashgear/cloud-client-eval">Script d'évalutation automatique de votre API</a>
         </section>
     </div>
 </div>
@@ -206,23 +289,25 @@
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.min.js"></script>
 
-<script>
-    // More info https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        history: true,
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
 
-        // More info https://github.com/hakimel/reveal.js#dependencies
-        dependencies: [
-            {src: 'plugin/markdown/marked.js'},
-            {src: 'plugin/markdown/markdown.js'},
-            {src: 'plugin/notes/notes.js', async: true},
-            {
-                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+<script>
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    history: true,
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+        {src: 'plugin/markdown/marked.js'},
+        {src: 'plugin/markdown/markdown.js'},
+        {src: 'plugin/notes/notes.js', async: true},
+        {
+            src: 'plugin/highlight/highlight.js', async: true, callback: function () {
                 hljs.initHighlightingOnLoad();
             }
-            }
-        ]
-    });
+        }
+    ]
+});
 </script>
 </body>
 </html>
