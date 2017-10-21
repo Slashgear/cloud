@@ -83,7 +83,7 @@
                 </ul>
             </section>
             <section>
-                <p>Côté architecte</p>
+                <h1>Côté architecte</h1>
                 <ul>
                     <li>L'application doit être testée (c'est dans votre intérêt)</li>
                     <li>Vous devez mettre en place de l'intégration continue</li>
@@ -123,18 +123,18 @@
                 <iframe src="https://giphy.com/embed/ZikyVyLF7aEaQ" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </section>
             <section>
-                ⚠️ Le premier crash du serveur ne coute rien, mais à partir du suivant ce sera 1 point sur la moyenne finale
+                ⚠️ Ne faites pas crash la machine de façon répétée.
             </section>
         </section>
         <section>
             <section data-markdown>
-                #Demande du client n° 1 - Fonctionnalités de base
+                #Demande du client n°1
 
                 Faire une API REST sur le port 80 du serveur permettant de manipuler ce type d'objet
 
                 ```javascript
                 {
-                    "id": 12121212123123,
+                    "id": "12121s12a23123",
                     "firstName": "Antoine",
                     "lastName": "Caron",
                     "birthDay": "2012-07-14",
@@ -148,9 +148,9 @@
             <section data-markdown>
                 #Méthodes disponibles (1/2)
 
-                * GET /users -> retourne tous les utilisateurs
-                * PUT /users -> permet de remplacer la collection entière par une nouvelle liste d'utilisateur
-                * DELETE /users -> supprime toute la collection des utilisateurs
+                * GET /user -> retourne tous les utilisateurs
+                * PUT /user -> permet de remplacer la collection entière par une nouvelle liste d'utilisateur
+                * DELETE /user -> supprime toute la collection des utilisateurs
 
                 ⚠️ à vos codes de retour HTTP
             </section>
@@ -187,9 +187,9 @@
             <section data-markdown>
                 #Demande du client n° 3 - Recherche
 
-                * GET /user/age?gt=0&page=1 -> retourne les 100 premiers utilisateurs dont l'age est supérieur à 0
-                * GET /user/age?eq=0&page=1 -> retourne les 100 premiers utilisateurs dont l'age est égal à 0
-                * GET /user/search?name=toto&page=1 -> retourne les 100 premiers utilisateurs dont le nom est "toto"
+                * GET /user/age?gt=0 -> retourne les 100 premiers utilisateurs dont l'age est supérieur à 0
+                * GET /user/age?eq=0 -> retourne les 100 premiers utilisateurs dont l'age est égal à 0
+                * GET /user/search?name=toto -> retourne les 100 premiers utilisateurs dont le nom est "toto"
                 * GET /user/nearest?lat=43.12&lon=5.97 -> retourne les 10 utilisateurs les plus proches
             </section>
             <section data-markdown>
@@ -281,7 +281,12 @@
             </section>
         </section>
         <section>
-            <a href="https://github.com/Slashgear/cloud-client-eval">Script d'évalutation automatique de votre API</a>
+            <a href="https://github.com/Slashgear/cloud-random-user">
+                Générateur de users aléatoires</a>
+        </section>
+        <section>
+            <a href="https://github.com/Slashgear/cloud-client-eval">
+                Script d'évalutation des demandes clients</a>
         </section>
     </div>
 </div>
